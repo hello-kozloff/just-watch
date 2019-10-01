@@ -245,12 +245,12 @@ gulp.task("build:smart-grid", () => {
     offset: "30px",
     mobileFirst: false,
     container: {
-      maxWidth: "1200px",
+      maxWidth: "1170px",
       fields: "15px"
     },
     breakPoints: {
       xl: {
-        width: '1200px'
+        width: '1170px'
       },
       lg: {
         width: '992px'
