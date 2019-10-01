@@ -1,6 +1,7 @@
 doctype html
 html(lang='en')
     block vars
+
     head
         meta(charset='UTF-8')
         meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
@@ -9,6 +10,7 @@ html(lang='en')
         title #{title}
 
         link(href='css/bundle.min.css' rel='stylesheet')
+
     body
         div(class="page page_" + pageName)
             block content
