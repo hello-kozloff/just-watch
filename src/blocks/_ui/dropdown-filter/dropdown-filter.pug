@@ -1,0 +1,6 @@
+include ../../../core/bemto
+
+mixin dropdown-filter(text)
+    +b("button")(type="button" class="dropdown-filter")
+        +e("span")(class="name")= text
+        i(class="icon-arrow-down")

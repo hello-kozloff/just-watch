@@ -1,0 +1,35 @@
+@import "../../../sass/_mixins/reset-button"
+@import "../../../sass/_mixins/transition"
+@import "../../../sass/variables"
+
+.dropdown-filter
+  @include rest-button()
+  height: $c-radioFilter-height
+
+  margin: 0
+  padding: 0 10px
+
+  display: flex
+  align-items: center
+
+  border: 1px solid $c-radioFilter-border-color
+
+  @include transition()
+
+  &__name
+    margin-right: 5px
+
+    color: $c-radioFilter-color
+    font-size: 15px
+    font-weight: normal
+
+  i
+    color: #b6babe
+    font-size: 12px
+
+  &:hover,
+  &:focus
+    background-color: darken($c-radioFilter-border-color, 10%)
+
+  &:active
+    background-color: $c-radioFilter-border-color
