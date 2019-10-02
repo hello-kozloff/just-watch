@@ -1,0 +1,18 @@
+include ../../core/bemto
+
+mixin single-item(object)
+    +b("a")(href=object.location class="single-item")
+
+        //#thumbnail
+        +e("header")(class="thumbnail")
+            +e("img")(src=object.thumbnail class="lazyload")
+        //#end-thumbnail
+
+        //#content
+        +e("div")(class="content")
+            +e("span")(class="title")= object.title
+
+            +e("footer")(class="footer")
+                +e("span")(class="views")= object.views
+                +e("span")(class="rating")= object.rating
+        //#end-content
