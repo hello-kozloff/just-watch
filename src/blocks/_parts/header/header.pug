@@ -1,5 +1,52 @@
 include ../../../core/bemto
 
-+b("header").header
-    +e.content
-        p Header component
++b("header")(class="header")
+    +e("div")(class="container")
+        //#site-logo
+        +e("a")(href="#" class="site-logo")
+            +e("img")(
+                src="images/site-logo/site-logo.png"
+                srcset="images/site-logo/site-logo@2x.png 2x"
+                alt="Just Watch"
+                class="lazysizes"
+            )
+        //#end-site-logo
+
+        //#site-menu
+        +e("ul")(class="site-menu")
+            +e("li")(class="wrapper-route")
+                +e("a")(href="#" class="route-link") Neu
+
+            +e("li")(class="wrapper-route _is-current")
+                +e("a")(href="#" class="route-link") Beliebt
+
+            +e("li")(class="wrapper-route")
+                +e("a")(href="#" class="route-link") Kino
+
+            +e("li")(class="wrapper-route")
+                +e("a")(href="#" class="route-link")
+                    span Watchlist
+                    i(class="icon-watchlist")
+        //#end-site-menu
+
+        //#site-search
+        +e("form")(method="GET" class="site-search")
+            +e("input")(
+                type="text"
+                class="search-field"
+                placeholder="Suche nach Filmen oder Serien"
+                required
+            )
+        //#end-site-search
+
+        //#actions
+        +e("div")(class="actions")
+            +e("a")(href="#" class="action _search")
+                i(class="icon-search")
+
+            +e("a")(href="#" class="action _account")
+                i(class="icon-user")
+
+            +e("a")(href="#" class="action _hamburger")
+                i(class="icon-hamburger")
+        //#end-actions

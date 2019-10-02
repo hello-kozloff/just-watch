@@ -1,0 +1,33 @@
+@import "../../../sass/smart-grid";
+
+.header {
+  &__site-logo {
+    @media (max-width: $break_md) {
+      max-width: 100px
+    }
+  }
+
+  &__site-menu {
+    @media (max-width: $break_md) {
+      display: none;
+    }
+  }
+
+  &__site-search {
+    @media (max-width: $break_lg) {
+      display: none;
+    }
+  }
+
+  &__actions {
+    @media (max-width: $break_md) {
+      margin-left: auto;
+    }
+  }
+
+  &__action_search {
+    @media (max-width: $break_lg) {
+      display: flex;
+    }
+  }
+}
