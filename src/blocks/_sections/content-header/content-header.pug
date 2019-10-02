@@ -1,0 +1,24 @@
+include ../../../core/bemto
+
+mixin content-header(headingObject, counter, sort)
+    +b("div")(class="content-header")
+        +e("div")(class="container")
+
+            //#heading
+            if (headingObject !== false)
+                +e("div")(class="box _heading")
+                    +e("a")(href=headingObject.location class="heading")= headingObject.heading
+            //#end-heading
+
+            //#counter
+            if (counter !== false)
+                +e("span")(class="counter")= counter + " Titel"
+            //#end-counter
+
+            //#sorting
+            if (sort !== false)
+                +e("div")(class="sorting __box")
+                    +e("span")(class="sorting-placeholder") sortiert nach
+                    +e("select")(class="sorting-list")
+                        +e("option") Beliebtheit
+            //#end-sorting

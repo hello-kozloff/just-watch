@@ -1,0 +1,104 @@
+@import "../../../sass/_mixins/reset-button"
+@import "../../../sass/_mixins/transition"
+@import "../../../sass/variables"
+@import "../../../sass/smart-grid"
+
+.content-header
+  margin-bottom: 25px
+
+  &__container
+    height: 100%
+    @include wrapper()
+
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__box
+    max-width: 500px
+    width: 100%
+
+  //#heading
+  &__heading
+    margin: 0
+    padding: 0
+
+    color: $c-text
+    font-size: 19px
+    font-weight: normal
+    line-height: 140%
+
+    text-decoration: none
+    outline: none
+
+    @include transition
+
+    &:after
+      display: inline-block
+      margin-left: 5px
+
+      content: "\e900"
+      transform: rotate(-90deg)
+
+      font-size: 14px
+      font-family: "icomoon"
+
+    &:hover,
+    &:focus
+      color: $c-orange
+  //#end-heading
+
+  //#counter
+  &__counter
+    color: $c-text
+    font-size: 14px
+    font-weight: normal
+
+    flex-shrink: 0
+  //#end-counter
+
+  //#sorting
+  &__sorting
+    display: flex
+    align-items: center
+    justify-content: flex-end
+
+    &:after
+      content: "\e900"
+      margin-left: 5px
+
+      color: #4c5a67
+      font-size: 14px
+      font-family: "icomoon"
+
+  &__sorting-placeholder
+    margin-right: 5px
+
+    color: $c-text
+    font-size: 14px
+
+  &__sorting-list
+    margin: 0
+    padding: 0
+
+    color: $c-button-icon-color
+    font-size: 14px
+
+    border: none
+    background: transparent
+
+    cursor: pointer
+    outline: none
+
+    appearance: none
+    -moz-appearance: none
+    -webkit-appearance: none
+
+    @include transition()
+
+    &:hover,
+    &:focus
+      color: lighten($c-button-icon-color, 20%)
+  //#end-sorting
+
+@import "responsive"

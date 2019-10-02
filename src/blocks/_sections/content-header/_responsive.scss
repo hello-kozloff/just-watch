@@ -1,0 +1,37 @@
+@import "../../../sass/smart-grid";
+
+.content-header {
+  &__container {
+    @media (max-width: $break_md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__box {
+    @media (max-width: $break_lg) {
+      max-width: none;
+      width: auto;
+    }
+
+    &_heading {
+      @media (max-width: $break_md) {
+        order: 1;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__counter {
+    @media (max-width: $break_md) {
+      order: 0;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__sorting {
+    @media (max-width: $break_md) {
+      order: 2;
+    }
+  }
+}
