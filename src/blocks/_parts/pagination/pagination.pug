@@ -1,0 +1,9 @@
+include ../../../core/bemto
+
++b("ul")(class="pagination")
+    +e("li")(class="route-wrapper _is-current")
+        +e("a")(href="#" class="route") 1
+
+    each value in [2, 3, 4, 5, 6]
+        +e("li")(class="route-wrapper")
+            +e("a")(href="#" class="route")= value
