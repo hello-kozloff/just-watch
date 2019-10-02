@@ -1,0 +1,26 @@
+include ../../../core/bemto
+
++b("footer")(class="footer")
+    +e("div")(class="container")
+
+        //#information
+        +e("div")(class="information")
+            +e("p")(class="copyright") <strong>JustWatch</strong> | Die Streaming-Suchmaschine
+            +e("span")(class="version") © 2019 JustWatch <span>(2.2.5)</span>
+        //#end-information
+
+        //#site-navigation
+        +e("ul")(class="site-navigation")
+            +e("li")(class="wrapper-route")
+                +e("a")(href="#" class="route-link") Datenschutzerklarung
+
+            +e("li")(class="wrapper-route")
+                +e("a")(href="#" class="route-link") AGB
+
+            +e("li")(class="wrapper-route")
+                +e("a")(href="#" class="route-link") Kontakt
+
+            +e("li")(class="wrapper-route")
+                +e("a")(href="#" class="route-link") DMCA
+
+        //#end-site-navigation
