@@ -1,0 +1,112 @@
+@import "../../../sass/_mixins/reset-button";
+@import "../../../sass/_mixins/transition";
+@import "../../../sass/smart-grid";
+@import "../../../sass/variables";
+
+.content-filters {
+  &__categories {
+    @media (max-width: $break_sm) {
+      margin-right: 10px;
+    }
+  }
+
+  &__placeholder {
+    @media (max-width: $break_lg) {
+      display: none;
+    }
+  }
+
+  &__reset {
+    @media (max-width: $break_lg) {
+      position: relative;
+      margin-left: 0;
+
+      width: 35px;
+      height: 35px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: transparent;
+      border-radius: 3px;
+
+      &:before {
+        position: absolute;
+        content: "\e906";
+
+        color: #546575;
+        font-family: "icomoon";
+      }
+
+      &:hover,
+      &:focus {
+        color: transparent;
+        background-color: darken($component-header-background-color, 1%);
+      }
+
+      &:active {
+        color: transparent;
+        background-color: darken($component-header-background-color, 2%);
+      }
+    }
+  }
+
+  &__filter {
+    @media (max-width: $break_lg) {
+      display: none;
+    }
+  }
+
+  &__toggle {
+    @media (max-width: $break_lg) {
+      @include rest-button();
+
+      width: auto;
+      height: 30px;
+
+      margin-right: 10px;
+      padding: 0 10px;
+      box-sizing: border-box;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: #4c5a67;
+      font-size: 12px;
+
+      border: 1px solid $c-radioFilter-border-color;
+      @include transition();
+
+      user-select: none;
+
+      span {
+        margin-right: 10px;
+
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      &:hover {
+        color: lighten($c-button-icon-color, 10%);
+        background-color: darken($c-radioFilter-border-color, 10%);
+      }
+
+      &:active {
+        color: lighten($c-button-icon-color, 15%);
+        background-color: $c-radioFilter-border-color;
+      }
+    }
+
+    @media (max-width: $break_sm) {
+      width: 30px;
+      padding: 0;
+
+      span {
+        display: none;
+      }
+    }
+  }
+}

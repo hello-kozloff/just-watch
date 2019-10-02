@@ -1,0 +1,83 @@
+@import "../../../sass/_mixins/reset-button"
+@import "../../../sass/_mixins/transition"
+@import "../../../sass/variables"
+@import "../../../sass/smart-grid"
+
+$c-contentFilters-height: 50px
+$c-contentFilters-background: #162530
+$c-contentFilters-reset-color: #546575
+
+.content-filters
+  height: $c-contentFilters-height
+  background-color: $c-contentFilters-background
+
+  &__container
+    height: 100%
+    @include wrapper()
+
+    display: flex
+    align-items: center
+
+  //#categories
+  &__categories
+    margin-right: 30px
+  //#end-categories
+
+  //#filters
+  &__filters
+    height: 100%
+
+    display: flex
+    align-items: center
+
+  &__placeholder
+    margin-right: 10px
+
+    color: $c-contentFilters-reset-color
+    font-size: 14px
+    font-weight: bold
+
+    text-transform: uppercase
+
+    &:after
+      margin-left: 5px
+
+      content: "\e901"
+      font-family: "icomoon"
+
+      color: #546575
+      font-size: 14px
+
+      vertical-align: middle
+
+  &__filter
+    margin-right: 10px
+
+  &__toggle
+    display: none
+
+  &__reset
+    height: 100%
+    @include rest-button()
+
+    margin-left: 10px
+
+    color: #4c5a67
+    font-size: 14px
+    font-weight: normal
+
+    text-transform: uppercase
+
+    @include transition()
+
+    &:hover,
+    &:focus
+      color: lighten($c-contentFilters-reset-color, 15%)
+
+    &:active
+      color: lighten($c-contentFilters-reset-color, 20%)
+
+  //#end-filters
+
+
+@import "responsive"

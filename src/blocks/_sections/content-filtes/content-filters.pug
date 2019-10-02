@@ -1,0 +1,41 @@
+include ../../../core/bemto
+
+include ../../_ui/radio-filter/radio-filter
+include ../../_ui/dropdown-filter/dropdown-filter
+
++b("form")(method="GET" class="content-filters")
+    +e("div")(class="container")
+
+        //#categories
+        +e("div")(class="categories")
+            +b("div")(class="radio-filter-group")
+                +radio-filter("category", "Alle", true)
+                +radio-filter("category", "Filme")
+                +radio-filter("category", "Serien")
+        //#end-categories
+
+        //#filters
+        +e("div")(class="filters")
+            +e("span")(class="placeholder") Filter
+
+            +e("div")(class="filter")
+                +dropdown-filter("Erscheinungsjahr")
+
+            +e("div")(class="filter")
+                +dropdown-filter("Genres")
+
+            +e("div")(class="filter")
+                +dropdown-filter("Preis")
+
+            +e("div")(class="filter")
+                +dropdown-filter("Bewertung")
+
+            +e("div")(class="filter")
+                +dropdown-filter("FSK")
+
+            +e("button")(type="button" class="toggle")
+                span Filters
+                i(class="icon-filter")
+
+            +e("button")(type="button" class="reset") Zurücksetzen
+        //#end-filters
