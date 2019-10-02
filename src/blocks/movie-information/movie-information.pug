@@ -1,0 +1,8 @@
+include ../../core/bemto
+
+mixin movie-information(array)
+    +b("div")(class="movie-information")
+        each value in array
+            +e("div")(class="item")
+                +e("span")(class="title")= value.title
+                +e("span")(class="text")= value.text
