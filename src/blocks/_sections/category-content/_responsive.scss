@@ -1,0 +1,30 @@
+@import "../../../sass/smart-grid";
+
+.category-content {
+  &__gallery {
+    @media (max-width: $break_lg) {
+      > img {
+        width: calc(100% / 2 - 15px);
+
+        &:nth-child(3n + 3) {
+          margin-right: 25px;
+        }
+
+        &:nth-child(2n + 2) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    @media (max-width: $break_sm) {
+      > img {
+        width: 100%;
+        margin-right: 0;
+
+        &:nth-child(3n + 3) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
