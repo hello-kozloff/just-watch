@@ -1,0 +1,18 @@
+@import "../../../sass/smart-grid";
+
+.content-grid {
+  @media (max-width: 400px) {
+    .single-item {
+      max-width: calc(50% - 5px);
+      margin: 0 0 15px 0;
+
+      &__thumbnail {
+        height: 200px;
+      }
+
+      &__content {
+        height: calc(100% - 200px);
+      }
+    }
+  }
+}
