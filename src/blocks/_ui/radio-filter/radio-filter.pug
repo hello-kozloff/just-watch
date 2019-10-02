@@ -1,0 +1,12 @@
+include ../../../core/bemto
+
+mixin radio-filter(name, text, checked=false)
+    +b("label")(class="radio-filter")
+        +e("input")(
+            type="radio"
+            name=name
+            class="field"
+            checked=checked
+        )
+
+        +e("span")(class="name")= text
