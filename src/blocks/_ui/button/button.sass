@@ -1,0 +1,30 @@
+@import "../../../sass/_mixins/transition"
+@import "../../../sass/variables"
+@import "../../../sass/smart-grid"
+
+.button
+  padding: 0 25px
+  display: inline-block
+
+  color: $c-black
+  font-weight: bold
+  font-size: 16px
+  line-height: 40px
+
+  text-decoration: none
+
+  border: none
+  border-radius: 0
+  background: $c-orange
+
+  box-shadow: 0 2px 5px rgba($c-black, .3)
+
+  outline: none
+  @include transition()
+
+  &:hover,
+  &:focus
+    background: lighten($c-orange, 15%)
+
+  &:active
+    background: darken($c-orange, 10%)
