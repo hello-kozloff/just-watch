@@ -2,6 +2,8 @@
 
 .content-grid {
   @media (max-width: 400px) {
+    margin-bottom: -15px;
+
     .single-item {
       max-width: calc(50% - 5px);
       margin: 0 0 15px 0;
