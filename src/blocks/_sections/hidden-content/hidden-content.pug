@@ -1,0 +1,22 @@
+include ../../../core/bemto
+include ../../_ui/button/button
+
++b("section")(class="hidden-content")
+    +e("div")(class="container")
+
+        //#overlay
+        +e("div")(class="overlay")
+            +e("h3")(class="heading") Was soll ich jetzt bloß schauen?
+            +e("p")(class="description") Bestimme deinen Filmgeschmack und erhalte auf dich zugeschnittene Empfehlungen.
+            +button("Movie-Quiz starten")
+        //#end-overlay
+
+        //#grid
+        +e("div")(class="grid")
+            +e("div")(class="item lazyload" data-bgset="https://images.justwatch.com/poster/8612790/s332")
+            +e("div")(class="item lazyload" data-bgset="https://images.justwatch.com/poster/141497110/s332")
+            +e("div")(class="item lazyload" data-bgset="https://images.justwatch.com/poster/17037788/s332")
+            +e("div")(class="item lazyload" data-bgset="https://images.justwatch.com/poster/143423047/s332")
+            +e("div")(class="item lazyload" data-bgset="https://images.justwatch.com/poster/33699002/s332")
+            +e("div")(class="item lazyload" data-bgset="https://images.justwatch.com/poster/8581036/s332")
+        //#end-grid

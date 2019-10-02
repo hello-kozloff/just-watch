@@ -1,0 +1,35 @@
+@import "../../../sass/smart-grid";
+
+.hidden-content {
+  &__item {
+    @media (max-width: $break_lg) {
+      &:last-child {
+        display: none;
+      }
+
+      &:nth-last-child(-n + 2) {
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: $break_md) {
+      &:nth-last-child(-n + 2) {
+        display: none;
+      }
+
+      &:nth-last-child(-n + 3) {
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: $break_sm) {
+      &:nth-last-child(-n + 4) {
+        display: none;
+      }
+
+      &:nth-last-child(-n + 5) {
+        margin-right: 0;
+      }
+    }
+  }
+}
