@@ -1,0 +1,113 @@
+@import "../../../sass/_mixins/reset-button"
+@import "../../../sass/_mixins/transition"
+@import "../../../sass/variables"
+@import "../../../sass/smart-grid"
+
+.page-information
+  padding: 20px 0
+
+  &_small-content
+    .page-information__toggle,
+    .page-information__content:after
+      display: none
+
+    .page-information__content
+      height: auto
+
+  &_is-toggle
+    .page-information__content
+      height: auto
+
+      &:after
+        display: none
+
+  &__container
+    @include wrapper()
+
+  //#header
+  &__header
+    position: relative
+
+  &__heading
+    margin: 0 0 5px 0
+    padding: 0 45px 0 0
+
+    color: $c-text
+    font-weight: bold
+    font-size: 19px
+    line-height: 140%
+
+  &__toggle
+    @include rest-button()
+
+    position: absolute
+
+    top: 0
+    right: 0
+    bottom: 0
+
+    margin: auto
+
+    width: 35px
+    height: 35px
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    color: $c-text
+    font-size: 14px
+
+    border-radius: 3px
+
+    @include transition()
+
+    &:hover,
+    &:focus
+      color: $c-white
+      background-color: lighten($component-header-background-color, 1%)
+
+    &:active
+      background-color: lighten($component-header-background-color, 2%)
+
+    i
+      @include transition()
+
+    &_is-active
+      i
+        transform: rotate(-180deg)
+
+      background-color: lighten($component-header-background-color, .5%)
+  //#end-header
+
+  //#content
+  &__content
+    position: relative
+    height: 120px
+
+    padding-bottom: 10px
+
+    overflow: hidden
+    @include transition()
+
+    &:after
+      content: ""
+
+      position: absolute
+      z-index: 99
+
+      bottom: 0
+
+      width: 100%
+      height: 15px
+      display: inline-block
+
+      background: linear-gradient(bottom, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0) 100%)
+
+  &__description
+    margin: .6rem 0
+
+    color: $c-text
+    font-weight: normal
+    font-size: 16px
+    line-height: 140%
