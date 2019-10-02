@@ -1,0 +1,10 @@
+include ../../core/bemto
+
+mixin critics(array)
+    +b("div")(class="critics")
+        each value in array
+            +e("a")(href="#" class="item")
+                +e("div")(class="thumbnail")
+                    img(src=value.thumbnail class="lazyload")
+
+                +e("span")(class="counter")= value.count
