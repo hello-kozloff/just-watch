@@ -1,9 +1,10 @@
 $(document).ready(() => {
     $(".single-carousel").flickity({
+        cellAlign: 'center',
         draggable: false,
-        wrapAround: true,
-        prevNextButtons: false,
+        prevNextButtons: true,
         pageDots: false,
-        accessibility: false
+        accessibility: false,
+        wrapAround: true
     });
 });
