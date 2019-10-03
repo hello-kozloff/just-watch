@@ -1,5 +1,7 @@
 include ../../../core/bemto
 
+include ../../_ui/button/button
+
 +b("header")(class="header")
     +e("div")(class="container")
         //#site-logo
@@ -31,12 +33,17 @@ include ../../../core/bemto
 
         //#site-search
         +e("form")(method="GET" class="site-search")
+            +e("a")(href="#" class="action _close")
+                i(class="icon-close")
+
             +e("input")(
                 type="text"
                 class="search-field"
                 placeholder="Suche nach Filmen oder Serien"
                 required
             )
+            +e("div")(class="submit-search")
+                +submit-button("Zu finden")
         //#end-site-search
 
         //#actions

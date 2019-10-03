@@ -16,6 +16,41 @@
   &__site-search {
     @media (max-width: $break_lg) {
       display: none;
+
+      position: absolute;
+      z-index: 999999;
+
+      margin: 0;
+      padding: 0 15px;
+
+      top: 100px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      height: 50px;
+
+      &:before {
+        margin-left: 15px;
+      }
+
+      &_is-visible {
+        display: block;
+      }
+    }
+  }
+
+  &__submit-search {
+    @media (max-width: $break_lg) {
+      display: block;
+      margin-top: 15px;
+
+      .button {
+        width: 100%;
+        display: block;
+
+        font-size: 14px;
+      }
     }
   }
 
@@ -25,9 +60,24 @@
     }
   }
 
-  &__action_search {
-    @media (max-width: $break_lg) {
-      display: flex;
+  &__action {
+    &_search {
+      @media (max-width: $break_lg) {
+        display: flex;
+      }
+    }
+
+    &_close {
+      @media (max-width: $break_lg) {
+        width: 35px;
+        height: 35px;
+
+        position: absolute;
+        top: -45px;
+        right: 15px;
+
+        display: flex;
+      }
     }
   }
 }
