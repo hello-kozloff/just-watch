@@ -1,0 +1,10 @@
+include ../../core/bemto
+
+mixin single-actor(thumbnail, username, role)
+    +b("div")(class="single-actor")
+        +e("div")(class="thumbnail")
+            +e("img")(src=thumbnail class="lazyload")
+
+        +e("div")(class="content")
+            +e("h5")(class="username")= username
+            +e("p")(class="role")= role
