@@ -1,0 +1,29 @@
+@import "../../../sass/_mixins/transition"
+@import "../../../sass/variables"
+
+.textarea
+  width: 100%
+  min-height: 120px
+  display: block
+
+  margin: 0
+  padding: 13px
+  box-sizing: border-box
+
+  color: $c-black
+  font-size: 15px
+  font-weight: normal
+
+  border: none
+  border-radius: 3px
+  background-color: #dddddd
+
+  outline: none
+  resize: none
+
+  &::placeholder
+    color: #676767
+    @include transition()
+
+  &:focus::placeholder
+    opacity: .3

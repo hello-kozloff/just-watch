@@ -1,0 +1,10 @@
+include ../../../core/bemto
+
+mixin textarea(type, name, placeholder, required=false)
+    +b("textarea")(
+        type=type,
+        name=name,
+        placeholder=placeholder,
+        required=required
+        class="textarea"
+    )
