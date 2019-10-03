@@ -184,7 +184,8 @@ gulp.task("build:vendors-script", () => {
     "node_modules/jquery/dist/jquery.js",
     "node_modules/lazysizes/lazysizes.js",
     "node_modules/lazysizes/plugins/bgset/ls.bgset.js",
-    "node_modules/flickity/dist/flickity.pkgd.js"
+    "node_modules/flickity/dist/flickity.pkgd.js",
+    "node_modules/ion-rangeslider/js/ion.rangeSlider.js"
   ])
     .pipe(contact("vendor.js"))
     .pipe(gulp.dest("static/js"))
