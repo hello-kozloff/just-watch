@@ -1,0 +1,30 @@
+include ../../../core/bemto
+
+include ../../_ui/input/input
+include ../../_ui/button/button
+include ../../_ui/textarea/textarea
+
++b("form")(method="POST" class="send-comment")
+    +e("div")(class="header")
+        +e("div")(class="centered")
+            +e("h4")(class="heading") Schreibe einen Kommentar
+
+    +e("div")(class="grid")
+        +e("div")(class="column _left")
+            +e("div")(class="row")
+                +input("text", "user_name", "Name *", true)
+
+            +e("div")(class="row")
+                +input("email", "user_email", "E-Mail *", true)
+
+            +e("div")(class="row")
+                +input("text", "user_website", "Website")
+
+            +e("div")(class="row")
+                +submit-button("Kommentar abschicken")
+
+        +e("div")(class="column _right")
+            +textarea("text", "user_comment", "Kommentar *", true)
+
+    +e("div")(class="notification")
+        +e("span")(class="message") Deine E-mail-Adresse wird nicht veröffentlicht. Erforderliche Felder sind mit * markiert
