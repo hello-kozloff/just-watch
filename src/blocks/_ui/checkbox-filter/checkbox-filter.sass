@@ -1,0 +1,41 @@
+@import "../../../sass/_mixins/transition"
+@import "../../../sass/variables"
+
+.checkbox-filter
+  height: $c-radioFilter-height
+  display: inline-block
+
+  margin: 0 5px 5px 0
+
+  &__field
+    position: absolute
+    opacity: 0
+
+    &:checked + .checkbox-filter__name
+      background-color: $c-radioFilter-border-color
+
+  &__name
+    height: 100%
+
+    padding: 0 10px
+    display: inline-block
+    box-sizing: border-box
+
+    color: $c-radioFilter-color
+    font-size: 15px
+    font-weight: normal
+
+    line-height: $c-radioFilter-height - 4px
+
+    cursor: pointer
+
+    border: 1px solid $c-radioFilter-border-color
+    @include transition()
+
+    user-select: none
+
+    &:hover
+      background-color: darken($c-radioFilter-border-color, 10%)
+
+    &:active
+      background-color: $c-radioFilter-border-color

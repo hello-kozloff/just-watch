@@ -1,0 +1,11 @@
+include ../../../core/bemto
+
+mixin checkbox-filter(name, text)
+    +b("label")(class="checkbox-filter")
+        +e("input")(
+            type="checkbox"
+            name=name
+            class="field"
+        )
+
+        +e("span")(class="name")= text

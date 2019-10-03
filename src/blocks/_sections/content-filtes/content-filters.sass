@@ -8,6 +8,10 @@ $c-contentFilters-background: #162530
 $c-contentFilters-reset-color: #546575
 
 .content-filters
+  position: sticky
+  z-index: 999999
+  top: 50px
+
   margin-bottom: 40px
 
   height: $c-contentFilters-height
@@ -31,6 +35,10 @@ $c-contentFilters-reset-color: #546575
 
     display: flex
     align-items: center
+
+  &__filter
+    display: flex
+    justify-content: center
 
   &__placeholder
     margin-right: 10px

@@ -1,0 +1,82 @@
+@import "../../sass/_mixins/reset-button"
+@import "../../sass/_mixins/transition"
+@import "../../sass/variables"
+
+.dropdown-content
+  display: none
+
+  max-width: 400px
+  width: 100%
+
+  position: absolute
+  z-index: 99999
+
+  padding: 20px
+  margin-top: 40px
+  box-sizing: border-box
+
+  border-radius: 3px
+  background-color: $body-color
+
+  &_is-toggle
+    display: block
+
+  &:before
+    content: ""
+
+    position: absolute
+    top: -5px
+    left: 0
+    right: 0
+
+    width: 0
+    height: 0
+
+    margin: auto
+
+    border-left: 8px solid transparent
+    border-right: 8px solid transparent
+    border-bottom: 8px solid $body-color
+
+  &__module:not(:last-child)
+    padding-bottom: 15px
+    margin-bottom: 15px
+    border-bottom: 1px solid #162530
+
+  &__header
+    margin-bottom: 25px
+
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__heading
+    margin: 0
+    padding: 0
+
+    color: $c-text
+    font-size: 18px
+    font-weight: normal
+
+  &__reset
+    @include rest-button()
+
+    padding: 7px 10px
+
+    color: #4c5a67
+    font-size: 16px
+
+    border-radius: 3px
+    background-color: lighten($body-color, 2%)
+
+    @include transition()
+
+    &:hover,
+    &:focus
+      background-color: lighten($body-color, 5%)
+
+    &:active
+      background-color: lighten($body-color, 1%)
+
+  &__footer
+    margin-top: 15px

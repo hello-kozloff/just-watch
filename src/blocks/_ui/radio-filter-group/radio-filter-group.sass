@@ -1,7 +1,16 @@
 .radio-filter-group
-  display: flex
-  align-items: center
+  .radio-filter
+    margin-bottom: 5px
+    margin-right: 5px
 
-  .radio-filter:not(:last-child)
-    .radio-filter__name
-      border-right: none
+  &:not(.radio-filter-group_not-stack)
+    display: flex
+    align-items: center
+
+    .radio-filter
+      margin-bottom: 0
+      margin-right: 0
+
+    .radio-filter:not(:last-child)
+      .radio-filter__name
+        border-right: none

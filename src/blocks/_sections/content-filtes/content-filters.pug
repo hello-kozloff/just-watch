@@ -2,6 +2,7 @@ include ../../../core/bemto
 
 include ../../_ui/radio-filter/radio-filter
 include ../../_ui/dropdown-filter/dropdown-filter
+include ../../_ui/checkbox-filter/checkbox-filter
 
 +b("form")(method="GET" class="content-filters")
     +e("div")(class="container")
@@ -19,19 +20,150 @@ include ../../_ui/dropdown-filter/dropdown-filter
             +e("span")(class="placeholder") Filter
 
             +e("div")(class="filter")
-                +dropdown-filter("Erscheinungsjahr")
+                +dropdown-filter("filter_year", "Erscheinungsjahr")
+
+                //#dropdown-content
+                +b("div")(data-target="filter_year" class="dropdown-content")
+                    +e("div")(class="header")
+                        +e("h5")(class="heading") Erscheinungsjahr
+                        +e("button")(type="button" class="reset") Zurücksetzen
+
+                    +e("div")(class="content")
+                        +e("div")(class="filter _year")
+                            +e("input")(
+                                data-type="double"
+                                data-min="1990"
+                                data-max="2019"
+                                data-from="1990"
+                                class="range"
+                            )
+
+                    +e("div")(class="footer")
+                        +b("div")(class="radio-filter-group  _not-stack")
+                            +b("label")(class="radio-filter")
+                                +e("input")(
+                                    type="radio"
+                                    name="year_settings"
+                                    data-action="this_year"
+                                    class="field"
+                                    checked=checked
+                                )
+
+                                +e("span")(class="name") Dieses Jahr
+
+                            +b("label")(class="radio-filter")
+                                +e("input")(
+                                    type="radio"
+                                    name="year_settings"
+                                    data-action="last_year"
+                                    class="field"
+                                    checked=checked
+                                )
+
+                                +e("span")(class="name") Letztes Jahr
+                //#dropdown-content-end
 
             +e("div")(class="filter")
-                +dropdown-filter("Genres")
+                +dropdown-filter("filter_genre", "Genres")
+
+                //#dropdown-content
+                +b("div")(data-target="filter_genre" class="dropdown-content")
+                    +e("div")(class="header")
+                        +e("h5")(class="heading") Genres
+                        +e("button")(type="button" class="reset") Zurücksetzen
+
+                    +e("div")(class="content")
+                        +checkbox-filter("action_and_adventure", "Action & Abenteuer")
+                        +checkbox-filter("animation", "Animation")
+                        +checkbox-filter("comedies", "Komödien")
+                        +checkbox-filter("crimea", "Krimi")
+
+                //#dropdown-content-end
 
             +e("div")(class="filter")
-                +dropdown-filter("Preis")
+                +dropdown-filter("filter_price", "Preis")
+
+                //#dropdown-content
+                +b("div")(data-target="filter_price" class="dropdown-content")
+                    +e("div")(class="module _price")
+                        +e("div")(class="header")
+                            +e("h5")(class="heading") Preis
+                            +e("button")(type="button" class="reset") Zurücksetzen
+
+                        +e("div")(class="content")
+                            +e("div")(class="filter _price")
+                                +e("input")(
+                                    data-type="double"
+                                    data-min="0"
+                                    data-max="50"
+                                    data-from="0"
+                                    class="range"
+                                )
+
+                        +e("div")(class="footer")
+                            +b("div")(class="radio-filter-group _not-stack")
+                                +b("label")(class="radio-filter")
+                                    +e("input")(
+                                        type="radio"
+                                        name="price_settings"
+                                        data-action="up_to_1"
+                                        class="field"
+                                        checked=checked
+                                    )
+
+                                    +e("span")(class="name") bis zu €1
+
+                                +b("label")(class="radio-filter")
+                                    +e("input")(
+                                        type="radio"
+                                        name="price_settings"
+                                        data-action="up_to_2"
+                                        class="field"
+                                        checked=checked
+                                    )
+
+                                    +e("span")(class="name") bis zu €2
+
+                                +b("label")(class="radio-filter")
+                                    +e("input")(
+                                        type="radio"
+                                        name="price_settings"
+                                        data-action="up_to_3"
+                                        class="field"
+                                        checked=checked
+                                    )
+
+                                    +e("span")(class="name") bis zu €3
+
+                                +b("label")(class="radio-filter")
+                                    +e("input")(
+                                        type="radio"
+                                        name="price_settings"
+                                        data-action="up_to_5"
+                                        class="field"
+                                        checked=checked
+                                    )
+
+                                    +e("span")(class="name") bis zu €5
+
+                    +e("div")(class="module _type")
+                        +e("div")(class="header")
+                            +e("h5")(class="heading") Typ
+                            +e("button")(type="button" class="reset") Zurücksetzen
+
+                        +e("div")(class="content")
+                            +checkbox-filter("free", "Gratis")
+                            +checkbox-filter("ads", "Ads")
+                            +checkbox-filter("flatrate", "Flatrate")
+                            +checkbox-filter("to_buy", "Kaufen")
+                            +checkbox-filter("lend", "Leihen")
+                //#dropdown-content-end
 
             +e("div")(class="filter")
-                +dropdown-filter("Bewertung")
+                +dropdown-filter("filter_rating", "Bewertung")
 
             +e("div")(class="filter")
-                +dropdown-filter("FSK")
+                +dropdown-filter("filter_rated", "FSK")
 
             +e("button")(type="button" class="toggle")
                 span Filters
