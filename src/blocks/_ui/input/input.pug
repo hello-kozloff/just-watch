@@ -1,0 +1,10 @@
+include ../../../core/bemto
+
+mixin input(type, name, placeholder, required=false)
+    +b("input")(
+        type=type,
+        name=name,
+        placeholder=placeholder,
+        required=required
+        class="input"
+    )
