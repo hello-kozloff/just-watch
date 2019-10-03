@@ -4,6 +4,7 @@ $(document).ready(() => {
     $(".header__action_search").on("click", function (event) {
         event.preventDefault();
 
+        $("body").addClass("fixed");
         $(".overlay").addClass("overlay_is-visible");
         $(".header__site-search").addClass("header__site-search_is-visible");
     });
@@ -12,6 +13,7 @@ $(document).ready(() => {
     $(".header__action_close").on("click", function (event) {
         event.preventDefault();
 
+        $("body").removeClass("fixed");
         $(".overlay").removeClass("overlay_is-visible");
         $(".header__site-search").removeClass("header__site-search_is-visible");
     });
