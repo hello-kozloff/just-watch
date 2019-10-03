@@ -5,4 +5,25 @@
     height: 200px;
     margin-bottom: -30px;
   }
+
+  &__content {
+    .flickity-page-dots {
+      @media (max-width: $break_lg) {
+        display: none;
+      }
+    }
+  }
+
+  &__buttons {
+    @media (max-width: $break_lg) {
+      height: 170px;
+    }
+  }
+
+  .flickity-prev-next-button {
+    @media (max-width: $break_lg) {
+      width: 30px;
+      height: 30px;
+    }
+  }
 }

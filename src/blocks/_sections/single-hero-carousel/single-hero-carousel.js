@@ -1,10 +1,15 @@
 $(document).ready(() => {
-    $(".single-hero-carousel").flickity({
+    $(".single-hero-carousel__content").flickity({
         draggable: false,
         wrapAround: true,
-        prevNextButtons: false,
-        pageDots: false,
+        prevNextButtons: true,
+        pageDots: true,
         accessibility: false,
-        setGallerySize: false
+        setGallerySize: false,
+        autoPlay: 5000,
+        pauseAutoPlayOnHover: true
     });
+
+    const prevNextButtons = $(".single-hero-carousel .flickity-button");
+    $(".single-hero-carousel__buttons").append(prevNextButtons);
 });
