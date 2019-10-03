@@ -4,6 +4,7 @@ $(document).ready(() => {
         wrapAround: true,
         prevNextButtons: false,
         pageDots: false,
-        accessibility: false
+        accessibility: false,
+        setGallerySize: false
     });
 });

@@ -1,0 +1,8 @@
+@import "../../../sass/smart-grid";
+
+.single-hero-carousel {
+  @media (max-width: $break_lg) {
+    height: 200px;
+    margin-bottom: -30px;
+  }
+}

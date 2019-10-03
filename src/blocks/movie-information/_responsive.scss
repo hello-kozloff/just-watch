@@ -1,0 +1,17 @@
+@import "../../sass/smart-grid";
+
+.movie-information {
+  &__item {
+    @media (max-width: $break_lg) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    @media (max-width: $break_lg) {
+      max-width: none;
+      margin-right: 0;
+    }
+  }
+}

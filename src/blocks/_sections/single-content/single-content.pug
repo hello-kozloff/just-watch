@@ -1,0 +1,169 @@
+include ../../../core/bemto
+
+include ../../critics/critics
+include ../../movie-information/movie-information
+include ../../single-actor/single-actor
+include ../../single-item/single-item
+
++b("section")(class="single-content")
+
+    //#sidebar
+    +e("aside")(class="sidebar")
+
+        //#poster
+        +e("div")(class="poster")
+            img(src="https://images.justwatch.com/poster/8544227/s332" class="lazyload")
+        //#poster-end
+
+        //#critics
+        +critics([
+            {
+                thumbnail: "images/critics/imdb-logo.png",
+                count: "6.3"
+            },
+            {
+                thumbnail: "images/critics/external-logo.png",
+                count: "0.836"
+            }
+        ])
+        //#critics-end
+
+        //#movie-information
+        +movie-information([
+            { title: "Original Title", text: "The North Star" },
+            { title: "Sprache", text: "Stream Deutsch, German Stream " },
+            { title: "Kinostart", text: "1943-11-04 " },
+            { title: "Productionsland", text: "United States of America" },
+            { title: "Direktor", text: "Lewis Milestone" },
+            { title: "Production Co ", text: "Samuel Goldwyn Productions" },
+            { title: "Typ", text: "Stream" }
+        ])
+        //#movie-information-end
+
+        //#banner
+        +e("a")(href="#" class="banner")
+            img(src="https://images.justwatch.com/poster/127473635/s332" class="lazyload")
+        //#banner-end
+
+    //#sidebar-end
+
+    //#content
+    +e("main")(class="content")
+
+        //#header
+        +e("div")(class="header")
+            +e("h1")(class="heading") The North Star <span>(1943)</span>
+        //#header-end
+
+        //#tags
+        +e("div")(class="tags __block")
+            +e("a")(href="#" class="tag") Stream
+        //#tags-end
+
+        //#advert
+        +e("div")(class="advert __block")
+            span Loading advert...
+        //#advert-end
+
+        //#videos
+        +e("div")(class="block")
+            +e("h3")(class="title") Videos: Trailers, Teasers, Featurettes
+            +e("div")(class="video")
+                +e("video")(
+                    src="https://storage.googleapis.com/coverr-main/mp4%2Fcoverr-spider-boat-1561050987454.mp4?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=coverr-183014%40appspot.gserviceaccount.com%2F20191003%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20191003T083305Z&X-Goog-Expires=300&X-Goog-SignedHeaders=host&X-Goog-Signature=0f6f04425ca6ad03ff12ad040ce74a582c5dc12bb405b8aeb0ce2de7e49e58cdad873e33d8a5e4b75a0a92e072ad8be46d984a4ff95036ad46c42c5c875f9fbad3bb88ee0177eb0117de1954e53fb66472aa8c53e20228c7a5f6ae3fb4c98b5cc8ea48df543aeabccc6ce0906ac691e53daf3131bce6024a56b4a6fca766893342d5711fd927d198808e818fbab8cc581b572893caf4d06fc183a5b93c5f32ded836a49409317de2b9b2651cab81c768574f809bec4d138f71095aadf507fa1ca421a34b3cf9c70a3df69308a2618da7c536a32699c770409037df0d91c27a5379bce924771e601beef67a9ac7811c123a22681440849c7f98dd966924ab851c"
+                    class="lazyload"
+                    controls
+                )
+        //#videos-end
+
+        //#cast
+        +e("div")(class="block")
+            +e("h3")(class="title") Cast
+
+            +b("div")(class="single-carousel")
+                +e("div")(class="slide")
+                    +single-actor("https://m.media-amazon.com/images/M/MV5BMTU1MDMwNjUzOF5BMl5BanBnXkFtZTYwMjk1MjI2._V1_.jpg", "Walter Hustgon", "Dr. Kurin")
+
+                +e("div")(class="slide")
+                    +single-actor("https://i.pinimg.com/474x/59/76/03/597603a6755efd04b6a2b4243f1e8e49--danny-huston-john-huston.jpg", "Walter Hustgon", "Dr. Kurin")
+
+                +e("div")(class="slide")
+                    +single-actor("https://calisphere.org/clip/500x500/b8e73c83a6a261f1383b41d4027ae22b", "Walter Hustgon", "Dr. Kurin")
+
+                +e("div")(class="slide")
+                    +single-actor("https://m.media-amazon.com/images/M/MV5BMTU1MDMwNjUzOF5BMl5BanBnXkFtZTYwMjk1MjI2._V1_.jpg", "Walter Hustgon", "Dr. Kurin")
+
+                +e("div")(class="slide")
+                    +single-actor("https://i.pinimg.com/474x/59/76/03/597603a6755efd04b6a2b4243f1e8e49--danny-huston-john-huston.jpg", "Walter Hustgon", "Dr. Kurin")
+        //#cast-end
+
+        //#editor
+        +e("div")(class="block")
+            +e("div")(class="editor")
+                h4 Inhalt
+                p Ein schöner Sommertag im Dorf North Star. Zuerst werden drei Familien vorgestellt. Da wäre zunächst die Familie Pavlov. Vater Rodion ist der Dorfvorsteher. Er und seine Frau Sophia haben zwei Töchter, Marina und Olga. Boris Simonov und seine Frau Nadya haben zwei Söhne, Kolya, der in der Luftwaffe dient und den ganzen Film über eine Uniform trägt, sowie Damian. Schließlich noch die Familie des berühmten Arztes Dr. Kurin, der mit seiner Frau Anna die beiden Kinder Clavdia und Grischa hat. Außerdem wird noch der Schweinehirt Karp vorgestellt. Dabei wird mehrfach gezeigt, wie glücklich alle sind.
+
+                h4 The North Star online anschauen: Stream, kaufen, oder leihen
+                p Du kannst derzeit "The North Star" exklusiv im Kino anschauen. Bei findest du Tickets für ein Kino in deiner Nähe.
+        //#editor-end
+
+        //#recommendations
+        +e("div")(class="recommendations __block")
+            +e("h3")(class="title") Was dich auch interessieren könnte
+            +b("div")(class="single-carousel")
+                +e("div")(class="slide")
+                    +single-item({
+                        location: "#",
+                        thumbnail: "https://images.justwatch.com/poster/127473635/s332",
+                        title: "Sword art online",
+                        views: "1 943",
+                        rating: "6.3"
+                    })
+
+                +e("div")(class="slide")
+                    +single-item({
+                        location: "#",
+                        thumbnail: "https://images.justwatch.com/poster/84989777/s332",
+                        title: "Sword art online",
+                        views: "1 943",
+                        rating: "6.3"
+                    })
+
+                +e("div")(class="slide")
+                    +single-item({
+                        location: "#",
+                        thumbnail: "https://images.justwatch.com/poster/8544227/s332",
+                        title: "Sword art online",
+                        views: "1 943",
+                        rating: "6.3"
+                    })
+
+                +e("div")(class="slide")
+                    +single-item({
+                        location: "#",
+                        thumbnail: "https://images.justwatch.com/poster/19147561/s332",
+                        title: "Sword art online",
+                        views: "1 943",
+                        rating: "6.3"
+                    })
+
+                +e("div")(class="slide")
+                    +single-item({
+                        location: "#",
+                        thumbnail: "https://images.justwatch.com/poster/147506985/s332",
+                        title: "Sword art online",
+                        views: "1 943",
+                        rating: "6.3"
+                    })
+        //#recommendations-end
+
+        //#banner
+        +e("a")(href="#" class="banner __block")
+            +e("img")(src="https://external-preview.redd.it/odSHllDdmlRsgiU57sq2mPPI0TWKucu3xf9EwpsBsh4.jpg?auto=webp&s=dd8646781d0087674183b1927c8bc21125fae0c4" class="lazyload")
+        //#banner-end
+
+        //#send-comment
+        +e("div")(class="block")
+            include ../../_sections/send-comment/send-comment
+        //#send-comment-end
+    //#content-end

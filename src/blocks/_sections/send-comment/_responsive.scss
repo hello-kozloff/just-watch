@@ -1,0 +1,58 @@
+@import "../../../sass/smart-grid";
+
+.send-comment {
+  @media (max-width: $break_sm) {
+    margin-bottom: 60px;
+  }
+
+  &__grid {
+    .button {
+      @media (max-width: $break_lg) {
+        padding: 0 10px;
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: $break_sm) {
+      flex-direction: column;
+    }
+
+    .button {
+      @media (max-width: $break_sm) {
+        width: calc(100% - 40px);
+
+        position: absolute;
+        bottom: 20px;
+      }
+    }
+  }
+
+  &__column {
+    @media (max-width: $break_lg) {
+      &:first-child {
+        margin-right: 5px;
+      }
+
+      &:last-child {
+        margin-left: 5px;
+      }
+    }
+
+    @media (max-width: $break_sm) {
+      &:first-child,
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    &_left {
+      @media (max-width: $break_lg) {
+        max-width: 180px;
+      }
+
+      @media (max-width: $break_sm) {
+        max-width: none;
+      }
+    }
+  }
+}

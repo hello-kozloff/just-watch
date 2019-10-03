@@ -1,0 +1,44 @@
+@import "../../../sass/smart-grid";
+
+.single-content {
+  @media (max-width: $break_md) {
+    flex-direction: column;
+  }
+
+  &__sidebar {
+    @media (max-width: $break_lg) {
+      max-width: 250px
+    }
+
+    @media (max-width: $break_md) {
+      max-width: none;
+      margin-right: 0;
+      margin-bottom: 35px;
+    }
+
+    .single-content__banner {
+      @media (max-width: $break_md) {
+        display: none;
+      }
+    }
+  }
+
+  &__poster {
+    @media (max-width: $break_md) {
+      padding-right: 40%;
+      box-sizing: border-box;
+    }
+
+    > img {
+      @media (max-width: $break_md) {
+        width: auto;
+        height: 100%;
+      }
+
+      @media (max-width: $break_sm) {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
