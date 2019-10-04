@@ -31,7 +31,7 @@ body
 .overlay
   display: none
   position: fixed
-  z-index: 99999
+  z-index: 999
 
   top: 0
   right: 0
@@ -42,3 +42,7 @@ body
 
   &_is-visible
     display: block
+
+  &_is-contrast
+    z-index: 9999
+    background-color: rgba($c-black, .8)
