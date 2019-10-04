@@ -1,0 +1,78 @@
+@import "../../../sass/_mixins/transition"
+@import "../../../sass/smart-grid"
+@import "../../../sass/variables"
+
+.navigation
+  position: absolute
+  z-index: 9999
+
+  top: 50px
+  right: 0
+
+  min-width: 250px
+  width: 100%
+
+  display: none
+  flex-direction: column
+
+  padding: 5px 0
+  box-sizing: border-box
+
+  border-radius: 3px
+  background-color: $body-color
+  box-shadow: 0 0 15px rgba($c-black, .3)
+
+  &__list
+    width: 100%
+
+    margin: 0
+    padding: 0
+
+    list-style: none
+
+    &_mobile
+      display: none
+
+      @media (max-width: $break_md)
+        display: block
+
+    &:not(:last-child)
+      border-bottom: 1px solid rgba($c-white, .04)
+
+  &__wrapper-route
+    width: 100%
+    height: 40px
+
+    &:not(:last-child)
+      border-bottom: 1px solid rgba($c-white, .04)
+
+  &__route
+    width: 100%
+    height: 100%
+
+    display: block
+    padding: 0 15px
+    box-sizing: border-box
+
+    color: $c-text
+    font-size: 14px
+    font-weight: normal
+    line-height: 40px
+
+    text-decoration: none
+    outline: none
+
+    @include transition()
+
+    &:hover,
+    &:focus
+      background-color: rgba($c-white, .05)
+
+    &:active
+      background-color: rgba($c-white, .065)
+
+
+  &_is-active
+    display: flex
+
+@import "responsive"

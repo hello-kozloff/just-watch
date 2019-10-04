@@ -56,6 +56,7 @@
 
   &__actions {
     @media (max-width: $break_md) {
+      position: initial;
       margin-left: auto;
     }
   }

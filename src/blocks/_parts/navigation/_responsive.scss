@@ -1,0 +1,7 @@
+@import "../../../sass/smart-grid";
+
+.navigation {
+  @media (max-width: $break_md) {
+    min-width: 100%;
+  }
+}
