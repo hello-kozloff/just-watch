@@ -1,0 +1,77 @@
+@import "../../../sass/_mixins/reset-button"
+@import "../../../sass/_mixins/transition"
+@import "../../../sass/variables"
+
+.toolbar-filters
+  display: none
+
+  position: fixed
+  z-index: 9999
+
+  width: 100%
+  height: calc(100% - 50px)
+
+  padding-top: 20px
+  box-sizing: border-box
+
+  top: 50px
+  right: 0
+  bottom: 0
+  left: 0
+
+  background-color: $body-color
+
+  &_is-active
+    display: block
+
+  &__close
+    @include rest-button()
+
+    display: block
+    margin-left: auto
+    margin-right: 20px
+    margin-bottom: 20px
+
+    width: 35px
+    height: 35px
+
+    color: #d5d5d5
+    font-size: 14px
+
+    border-radius: 3px
+    background-color: #0f1a24
+
+    @include transition()
+
+    &:hover,
+    &:focus
+      color: $c-white
+      background-color: lighten($component-header-background-color, 2%)
+
+    &:active
+      background-color: lighten($component-header-background-color, 3%)
+
+  &__container
+    height: calc(100% - 55px)
+
+    -ms-overflow-style: none
+    overflow-y: auto
+    overflow: -moz-scrollbars-none
+
+    &::-webkit-scrollbar
+      width: 0
+
+  .dropdown-content
+    position: initial
+
+    max-width: none
+    width: 100%
+
+    margin-top: 0
+    display: block
+
+    border-radius: 0
+    background: transparent
+
+    &:not(:last-child)
+      border-bottom: 1px solid rgba($c-white, .05)

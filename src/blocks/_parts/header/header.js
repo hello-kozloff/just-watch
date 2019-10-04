@@ -6,6 +6,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         $(".header__site-search").removeClass("header__site-search_is-visible");
+        $(".toolbar-filters").removeClass("toolbar-filters_is-active");
 
         const $div = $(".navigation");
         const $activeClass = "navigation_is-active";
@@ -34,6 +35,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         $(".navigation").removeClass("navigation_is-active");
+        $(".toolbar-filters").removeClass("toolbar-filters_is-active");
 
         const $div = $(".header__site-search");
         const $activeClass = "header__site-search_is-visible";
