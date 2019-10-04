@@ -10,7 +10,11 @@ $(document).ready(() => {
             settingsContainer.prop("checked", false);
         }
     });
-    const $instance = $filter.data("ionRangeSlider");
+    let $instances = [];
+
+    $filter.each((index) => {
+        $instances.push($($filter[index]).data("ionRangeSlider"));
+    });
 
     //# settings in year range-slider
     settingsContainer.on("click", function () {
@@ -21,18 +25,22 @@ $(document).ready(() => {
 
         switch (action) {
             case THIS_YEAR: {
-                $instance.update({
-                    from: currentYear,
-                    to: currentYear
-                });
+                $instances.forEach((value => {
+                    value.update({
+                        from: currentYear,
+                        to: currentYear
+                    });
+                }));
                 break;
             }
 
             case LAST_YEAR: {
-                $instance.update({
-                    from: currentYear - 1,
-                    to: currentYear - 1
-                });
+                $instances.forEach((value => {
+                    value.update({
+                        from: currentYear - 1,
+                        to: currentYear - 1
+                    });
+                }));
                 break;
             }
 
@@ -46,10 +54,12 @@ $(document).ready(() => {
     $("div[data-target='filter_year'] .dropdown-content__reset").on("click", function () {
         settingsContainer.prop("checked", false);
 
-        $instance.update({
-            from: 1990,
-            to: currentYear
-        });
+        $instances.forEach((value => {
+            value.update({
+                from: 1990,
+                to: currentYear
+            });
+        }));
     });
 });
 
@@ -73,7 +83,11 @@ $(document).ready(() => {
             settingsContainer.prop("checked", false);
         }
     });
-    const $instance = $filter.data("ionRangeSlider");
+    let $instances = [];
+
+    $filter.each((index) => {
+        $instances.push($($filter[index]).data("ionRangeSlider"));
+    });
 
     //# settings in year range-slider
     settingsContainer.on("click", function () {
@@ -86,22 +100,30 @@ $(document).ready(() => {
 
         switch (action) {
             case UP_TO_1: {
-                $instance.update({ from: 1 });
+                $instances.forEach((value => {
+                    value.update({ from: 1 });
+                }));
                 break;
             }
 
             case UP_TO_2: {
-                $instance.update({ from: 2 });
+                $instances.forEach((value => {
+                    value.update({ from: 2 });
+                }));
                 break;
             }
 
             case UP_TO_3: {
-                $instance.update({ from: 3 });
+                $instances.forEach((value => {
+                    value.update({ from: 3 });
+                }));
                 break;
             }
 
             case UP_TO_5: {
-                $instance.update({ from: 5 });
+                $instances.forEach((value => {
+                    value.update({ from: 5 });
+                }));
                 break;
             }
 
@@ -121,10 +143,12 @@ $(document).ready(() => {
         if (module.hasClass("dropdown-content__module_price")) {
             settingsContainer.prop("checked", false);
 
-            $instance.update({
-                from: 0,
-                to: 50
-            });
+            $instances.forEach((value => {
+                value.update({
+                    from: 0,
+                    top: 50
+                });
+            }));
         }
 
         //# type

@@ -19,10 +19,10 @@
   &__reset {
     @media (max-width: $break_lg) {
       position: relative;
-      margin-left: 0;
+      margin-left: 10px;
 
-      width: 35px;
-      height: 35px;
+      width: 30px;
+      height: 30px;
 
       display: flex;
       align-items: center;
@@ -30,6 +30,10 @@
 
       color: transparent;
       border-radius: 3px;
+
+      span {
+        display: none;
+      }
 
       &:before {
         position: absolute;
